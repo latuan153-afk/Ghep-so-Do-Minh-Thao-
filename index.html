@@ -348,7 +348,8 @@
 
         let res2D = Array.from(set2D).sort();
         
-        document.getElementById('contentTao2D').innerText = res2D.join(' '); 
+        // Thay đổi tại đây: Dùng join(',') thay vì join(' ')
+        document.getElementById('contentTao2D').innerText = res2D.join(','); 
         document.getElementById('countTao2D').innerText = res2D.length + ' số';
         document.getElementById('boxTao2D').classList.add('active');
     }
@@ -410,7 +411,8 @@
             });
         });
         let res3D = Array.from(set3D).sort();
-        document.getElementById('content3D').innerText = res3D.join(' ');
+        // Thay đổi tại đây: Dùng join(',') thay vì join(' ')
+        document.getElementById('content3D').innerText = res3D.join(',');
         document.getElementById('count3D').innerText = res3D.length + ' số';
         document.getElementById('box3D').classList.add('active');
         
@@ -425,7 +427,8 @@
                 });
             });
             res4D = Array.from(set4D).sort();
-            document.getElementById('content4D').innerText = res4D.join(' ');
+            // Thay đổi tại đây: Dùng join(',') thay vì join(' ')
+            document.getElementById('content4D').innerText = res4D.join(',');
             document.getElementById('count4D').innerText = res4D.length + ' số';
             document.getElementById('box4D').classList.add('active');
         } else {
@@ -442,7 +445,8 @@
                 });
             });
             let res5D = Array.from(set5D).sort();
-            document.getElementById('content5D').innerText = res5D.join(' ');
+            // Thay đổi tại đây: Dùng join(',') thay vì join(' ')
+            document.getElementById('content5D').innerText = res5D.join(',');
             document.getElementById('count5D').innerText = res5D.length + ' số';
             document.getElementById('box5D').classList.add('active');
         } else {
