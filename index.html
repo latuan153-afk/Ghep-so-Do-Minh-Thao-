@@ -348,7 +348,7 @@
 
         let res2D = Array.from(set2D).sort();
         
-        // Thay đổi tại đây: Dùng join(',') thay vì join(' ')
+        // GHÉP BẰNG DẤU PHẨY (Không có khoảng trắng)
         document.getElementById('contentTao2D').innerText = res2D.join(','); 
         document.getElementById('countTao2D').innerText = res2D.length + ' số';
         document.getElementById('boxTao2D').classList.add('active');
@@ -386,7 +386,7 @@
             xoaKhung1();
             xoaTrangPhan2();
             showToast('Đã dọn sạch mọi dữ liệu!');
-            window.scrollTo({ top: 0, behavior: 'smooth' }); // Cuộn lên trên cùng
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     }
 
@@ -402,7 +402,7 @@
             return;
         }
         
-        // Ghép 3D
+        // 1. Ghép 3D
         let set3D = new Set();
         arr2D.forEach(n2 => {
             arr3D.forEach(n3 => {
@@ -411,12 +411,12 @@
             });
         });
         let res3D = Array.from(set3D).sort();
-        // Thay đổi tại đây: Dùng join(',') thay vì join(' ')
+        // GHÉP BẰNG DẤU PHẨY
         document.getElementById('content3D').innerText = res3D.join(',');
         document.getElementById('count3D').innerText = res3D.length + ' số';
         document.getElementById('box3D').classList.add('active');
         
-        // Ghép 4D
+        // 2. Ghép 4D
         let res4D = [];
         if (arr4D.length > 0) {
             let set4D = new Set();
@@ -427,7 +427,7 @@
                 });
             });
             res4D = Array.from(set4D).sort();
-            // Thay đổi tại đây: Dùng join(',') thay vì join(' ')
+            // GHÉP BẰNG DẤU PHẨY
             document.getElementById('content4D').innerText = res4D.join(',');
             document.getElementById('count4D').innerText = res4D.length + ' số';
             document.getElementById('box4D').classList.add('active');
@@ -435,7 +435,7 @@
             document.getElementById('box4D').classList.remove('active');
         }
 
-        // Ghép 5D
+        // 3. Ghép 5D
         if (arr5D.length > 0 && res4D.length > 0) {
             let set5D = new Set();
             res4D.forEach(n4 => {
@@ -445,7 +445,7 @@
                 });
             });
             let res5D = Array.from(set5D).sort();
-            // Thay đổi tại đây: Dùng join(',') thay vì join(' ')
+            // GHÉP BẰNG DẤU PHẨY
             document.getElementById('content5D').innerText = res5D.join(',');
             document.getElementById('count5D').innerText = res5D.length + ' số';
             document.getElementById('box5D').classList.add('active');
